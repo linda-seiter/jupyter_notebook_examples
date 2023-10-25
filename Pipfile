@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 jupyter = "1.0.0"
+pytest = "7.4.3"
 
 [dev-packages]
 
