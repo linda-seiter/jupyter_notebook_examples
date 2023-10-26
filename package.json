@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "ijavascript": "^5.2.1",
-    "javascript": "^1.0.0"
+    "jupyter": "^0.0.0"
   }
 }

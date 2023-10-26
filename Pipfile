@@ -12,4 +12,3 @@ ipykernel = "6.26.0"
 
 [requires]
 python_full_version = "3.11.4"
-
