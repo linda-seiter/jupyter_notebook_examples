@@ -1,6 +1,6 @@
 import io
 import sys
-from generated.task1 import happy_new_year
+from pytest_examples.generated.task1 import happy_new_year
 
 
 class TestHappyNewYear:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from generated.task2 import square_integers
+from pytest_examples.generated.task2 import square_integers
 
 class TestSquareIntegers:
     '''square_integers()'''
