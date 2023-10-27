@@ -1,12 +1,34 @@
 
-def square_integers(int_list):
-    return [i ** 2 for i in int_list]
+def happy_new_year():
+    countdown = 10
+    while countdown in range(10, 0, -1):
+        print(countdown)
+        countdown -= 1
 
-# Unit test for test_square_integers()
+    print("Happy New Year!")
+    
+    
+
+# Unit test for happy_new_year()
+import pytest  
+import io
+import sys  
 
 
-import pytest
-def test_square_integers():
-    '''returns squared ints for [1, 2, 3, 4, 5] and [-1, -2, -3, -4, -5]'''
-    assert(square_integers([1, 2, 3, 4, 5]) == [1, 4, 9, 16, 25])
-    assert(square_integers([-1, -2, -3, -4, -5]) == [1, 4, 9, 16, 25])
+def test_prints_10_to_1_hny():
+    '''prints 10 to 1 countdown then "Happy New Year!"'''
+    captured_out = io.StringIO()
+    sys.stdout = captured_out
+    happy_new_year()
+    sys.stdout = sys.__stdout__
+    answer = captured_out.getvalue()
+    
+    #answer.split(\n) produces a list that ends in ''
+    answer_list = answer.split('\n')
+    #second to last value should be the HNY string
+    assert answer_list[-2] == "Happy New Year!", "Your final line does not match 'Happy New Year!', check spelling/capitalization!"
+    digit_strings = [str(i) for i in range(1,11)]
+    remaining_digits = [i for i in digit_strings if i not in answer_list] 
+    assert remaining_digits == [], f"You didn't print all digits 1-10, missing {', '.join(remaining_digits)}"
+
+   

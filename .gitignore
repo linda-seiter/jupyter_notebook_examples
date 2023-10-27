@@ -1,3 +1,6 @@
 node_modules/
 .ipynb_checkpoints/
 .venv/
+# pytest cache
+.pytest_cache
+__pycache__
