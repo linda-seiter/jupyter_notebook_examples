@@ -1,6 +1,7 @@
 node_modules/
 .ipynb_checkpoints/
 .venv/
+.DS_Store
 # pytest cache
 .pytest_cache
 __pycache__
